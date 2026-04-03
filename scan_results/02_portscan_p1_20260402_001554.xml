@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///D:/UserFiles/IB tools/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Apr  2 00:15:57 2026 as: nmap -oX scan_results\\02_portscan_p1_20260402_001554.xml -sS -Pn -T4 -p- -&#45;open 192.168.31.1 -->
+<nmaprun scanner="nmap" args="nmap -oX scan_results\\02_portscan_p1_20260402_001554.xml -sS -Pn -T4 -p- -&#45;open 192.168.31.1" start="1775078157" startstr="Thu Apr  2 00:15:57 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.1" addrtype="ipv4"/>
+<address addr="A4:39:B3:B1:C1:0F" addrtype="mac" vendor="Beijing Xiaomi Mobile Software"/>
+<hostnames>
+</hostnames>
+</hosthint>

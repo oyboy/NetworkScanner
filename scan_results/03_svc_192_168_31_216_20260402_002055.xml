@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///D:/UserFiles/IB tools/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Apr  2 00:31:13 2026 as: nmap -oX scan_results\\03_svc_192_168_31_216_20260402_002055.xml -sV -Pn -O -T4 -&#45;version-intensity 5 -&#45;osscan-guess -&#45;max-retries 2 -p 37481 192.168.31.216 -->
+<nmaprun scanner="nmap" args="nmap -oX scan_results\\03_svc_192_168_31_216_20260402_002055.xml -sV -Pn -O -T4 -&#45;version-intensity 5 -&#45;osscan-guess -&#45;max-retries 2 -p 37481 192.168.31.216" start="1775079073" startstr="Thu Apr  2 00:31:13 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="37481"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.216" addrtype="ipv4"/>
+<address addr="8E:2D:69:6B:42:4B" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1775079076" endtime="1775079078"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.216" addrtype="ipv4"/>
+<address addr="8E:2D:69:6B:42:4B" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="37481"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="41487"/>
+</os>
+<distance value="1"/>
+<times srtt="54329" rttvar="20905" to="137949"/>
+</host>
+<runstats><finished time="1775079078" timestr="Thu Apr  2 00:31:18 2026" summary="Nmap done at Thu Apr  2 00:31:18 2026; 1 IP address (1 host up) scanned in 5.36 seconds" elapsed="5.36" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

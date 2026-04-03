@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///D:/UserFiles/IB tools/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Apr  2 00:30:46 2026 as: nmap -oX scan_results\\03_svc_192_168_31_117_20260402_002055.xml -sV -Pn -O -T4 -&#45;version-intensity 5 -&#45;osscan-guess -&#45;max-retries 2 -p 7680,57621,58236,61495 192.168.31.117 -->
+<nmaprun scanner="nmap" args="nmap -oX scan_results\\03_svc_192_168_31_117_20260402_002055.xml -sV -Pn -O -T4 -&#45;version-intensity 5 -&#45;osscan-guess -&#45;max-retries 2 -p 7680,57621,58236,61495 192.168.31.117" start="1775079046" startstr="Thu Apr  2 00:30:46 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="7680,57621,58236,61495"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.117" addrtype="ipv4"/>
+<address addr="D8:BB:C1:92:5B:DE" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1775079049" endtime="1775079073"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.117" addrtype="ipv4"/>
+<address addr="D8:BB:C1:92:5B:DE" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="57621"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="58236"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="unknown" servicefp="SF-Port58236-TCP:V=7.98%I=5%D=4/2%Time=69CD8E89%P=i686-pc-windows-windows%r(NULL,22,&quot;{\&quot;type\&quot;:\&quot;Tier1\&quot;,\&quot;version\&quot;:\&quot;1\.0\&quot;}\r\n&quot;)%r(HTTPOptions,22,&quot;{\&quot;type\&quot;:\&quot;Tier1\&quot;,\&quot;version\&quot;:\&quot;1\.0\&quot;}\r\n&quot;)%r(RPCCheck,22,&quot;{\&quot;type\&quot;:\&quot;Tier1\&quot;,\&quot;version\&quot;:\&quot;1\.0\&quot;}\r\n&quot;)%r(Kerberos,22,&quot;{\&quot;type\&quot;:\&quot;Tier1\&quot;,\&quot;version\&quot;:\&quot;1\.0\&quot;}\r\n&quot;)%r(X11Probe,22,&quot;{\&quot;type\&quot;:\&quot;Tier1\&quot;,\&quot;version\&quot;:\&quot;1\.0\&quot;}\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="61495"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Node.js Express framework" method="probed" conf="10"><cpe>cpe:/a:nodejs:node.js</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="7680"/>
+<osmatch name="Microsoft Windows 11 21H2" accuracy="91" line="75497">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="11" accuracy="91"><cpe>cpe:/o:microsoft:windows_11</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 6.2-RELEASE" accuracy="86" line="29729">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="6.X" accuracy="86"><cpe>cpe:/o:freebsd:freebsd:6.2</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="5561" lastboot="Wed Apr  1 22:58:32 2026"/>
+<distance value="1"/>
+<tcpsequence index="262" difficulty="Good luck!" values="A65C294,F80F9F3D,AF0E5525,9F4573D9,E72DF064,69F1DBD7"/>
+<ipidsequence class="Incremental" values="B075,B076,B078,B07A,B07C,B07E"/>
+<tcptssequence class="1000HZ" values="54D311,54D37B,54D3ED,54D454,54D4BB,54D522"/>
+<times srtt="4830" rttvar="3111" to="100000"/>
+</host>
+<runstats><finished time="1775079073" timestr="Thu Apr  2 00:31:13 2026" summary="Nmap done at Thu Apr  2 00:31:13 2026; 1 IP address (1 host up) scanned in 26.62 seconds" elapsed="26.62" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

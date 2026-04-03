@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///D:/UserFiles/IB tools/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Apr  2 00:20:55 2026 as: nmap -oX scan_results\\01_discovery_20260402_002055.xml -sn -PE -T4 -&#45;max-retries 2 192.168.31.0/24 -->
+<nmaprun scanner="nmap" args="nmap -oX scan_results\\01_discovery_20260402_002055.xml -sn -PE -T4 -&#45;max-retries 2 192.168.31.0/24" start="1775078455" startstr="Thu Apr  2 00:20:55 2026" version="7.98" xmloutputversion="1.05">
+<verbose level="0"/>
+<debugging level="0"/>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.1" addrtype="ipv4"/>
+<address addr="A4:39:B3:B1:C1:0F" addrtype="mac" vendor="Beijing Xiaomi Mobile Software"/>
+<hostnames>
+</hostnames>
+<times srtt="20439" rttvar="17175" to="100000"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.117" addrtype="ipv4"/>
+<address addr="D8:BB:C1:92:5B:DE" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+<times srtt="55185" rttvar="64714" to="314041"/>
+</host>
+<host><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.216" addrtype="ipv4"/>
+<address addr="8E:2D:69:6B:42:4B" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</host>
+<host><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="192.168.31.118" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</host>
+<runstats><finished time="1775078469" timestr="Thu Apr  2 00:21:09 2026" summary="Nmap done at Thu Apr  2 00:21:09 2026; 256 IP addresses (4 hosts up) scanned in 14.32 seconds" elapsed="14.32" exit="success"/><hosts up="4" down="252" total="256"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///D:/UserFiles/IB tools/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Apr  2 00:21:09 2026 as: nmap -oX scan_results\\02_portscan_p1_20260402_002055.xml -sS -Pn -T4 -p- -&#45;open 192.168.31.1 192.168.31.117 192.168.31.216 192.168.31.118 -->
+<nmaprun scanner="nmap" args="nmap -oX scan_results\\02_portscan_p1_20260402_002055.xml -sS -Pn -T4 -p- -&#45;open 192.168.31.1 192.168.31.117 192.168.31.216 192.168.31.118" start="1775078469" startstr="Thu Apr  2 00:21:09 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.117" addrtype="ipv4"/>
+<address addr="D8:BB:C1:92:5B:DE" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.1" addrtype="ipv4"/>
+<address addr="A4:39:B3:B1:C1:0F" addrtype="mac" vendor="Beijing Xiaomi Mobile Software"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.216" addrtype="ipv4"/>
+<address addr="8E:2D:69:6B:42:4B" addrtype="mac"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskprogress task="SYN Stealth Scan" time="1775078830" percent="67.24" remaining="173" etc="1775079003"/>
+<host starttime="1775078476" endtime="1775078988"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.1" addrtype="ipv4"/>
+<address addr="A4:39:B3:B1:C1:0F" addrtype="mac" vendor="Beijing Xiaomi Mobile Software"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65513">
+<extrareasons reason="reset" count="65513" proto="tcp" ports="1-52,54-79,81-442,444-783,785-5080,5082-5350,5352-8097,8099-8189,8194,8198-8379,8385-8442,8444-8898,8900-8998,9000-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="784"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="5081"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="sdl-ets" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5351"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="nat-pmp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8098"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="8190"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="gcp-rphy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8191"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="limnerpressure" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8192"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="sophos" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8193"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="sophos" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8195"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="blp2" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8196"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="8197"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="8380"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="cruise-update" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8381"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="8382"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+<port protocol="tcp" portid="8383"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="m2mservices" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8384"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="marathontp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8899"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ospf-lite" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8999"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="bctp" method="table" conf="3"/></port>
+</ports>
+<times srtt="23993" rttvar="13283" to="100000"/>
+</host>
+<host starttime="1775078476" endtime="1775078992"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.117" addrtype="ipv4"/>
+<address addr="D8:BB:C1:92:5B:DE" addrtype="mac" vendor="Micro-Star Intl"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-response" count="65531" proto="tcp" ports="1-7679,7681-57620,57622-58235,58237-61494,61496-65535"/>
+</extraports>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="57621"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="58236"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="61495"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+</ports>
+<times srtt="52500" rttvar="3156" to="100000"/>
+</host>
+<host starttime="1775078476" endtime="1775078992"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.31.216" addrtype="ipv4"/>
+<address addr="8E:2D:69:6B:42:4B" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65517">
+<extrareasons reason="reset" count="65517" proto="tcp" ports="1-6,8-22,24,26-109,112-134,136-138,140-142,144-255,257-442,444,446-586,588-992,994,996-1024,1026-3388,3390-8079,8081-37480,37482-65535"/>
+</extraports>
+<extraports state="filtered" count="17">
+<extrareasons reason="no-response" count="17" proto="tcp" ports="7,23,25,110-111,135,139,143,256,443,445,587,993,995,1025,3389,8080"/>
+</extraports>
+<port protocol="tcp" portid="37481"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+</ports>
+<times srtt="18486" rttvar="6220" to="100000"/>
+</host>
+<host starttime="1775078992" endtime="1775078996"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.31.118" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65519">
+<extrareasons reason="reset" count="65519" proto="tcp" ports="1-52,54-134,136,138,140-444,446-2342,2344-5039,5041-7889,7891-49663,49669-49704,49706-59109,59112-65535"/>
+</extraports>
+<extraports state="filtered" count="2">
+<extrareasons reason="no-response" count="2" proto="tcp" ports="53,137"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2343"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="nati-logos" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5040"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="7890"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="49705"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="59110"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="59111"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+</ports>
+<times srtt="94" rttvar="177" to="100000"/>
+</host>
+<runstats><finished time="1775078996" timestr="Thu Apr  2 00:29:56 2026" summary="Nmap done at Thu Apr  2 00:29:56 2026; 4 IP addresses (4 hosts up) scanned in 526.12 seconds" elapsed="526.12" exit="success"/><hosts up="4" down="0" total="4"/>
+</runstats>
+</nmaprun>
