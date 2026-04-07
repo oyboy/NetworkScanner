@@ -1,3 +1,5 @@
+import subprocess
+
 class BruteForceEngine:
     SERVICE_MAP = {
         "ssh": "ssh",

@@ -4,7 +4,6 @@ from BruteEngine import BruteForceEngine
 from Parser import Parser
 from ReconEngine import ReconEngine
 from ReportGenerator import ReportGenerator
-from WebEngine import WebEngine
 import argparse
 from datetime import datetime
 import os
