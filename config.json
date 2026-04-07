@@ -5,33 +5,37 @@
   "modes": {
     "stealth": {
       "name": "Скрытный скан",
+      "scanner": "nmap",
       "discovery_flags": "-sn -T3 --max-retries 2",
       "port_scan_flags": "-sS -Pn -T1 -f -f -D RND:8,ME --data-length 24 --randomize-hosts --max-retries 1 --scan-delay 500ms -g 53 --spoof-mac 0 -p-",
       "service_detect_flags": "-sV -Pn -T1 --version-intensity 3 -g 53 --max-retries 1 --scan-delay 300ms",
       "vuln_scripts": "",
-      "description": "Фрагментация, приманки, source-port DNS, случайный MAC. Скрипты отключены."
+      "ask_brute": false
     },
 
     "stealth_paranoid": {
       "name": "Параноидальная скрытность",
+      "scanner": "nmap",
       "discovery_flags": "-sn -PE -T1 --max-retries 1",
       "port_scan_flags": "-sS -Pn -T0 -f --mtu 16 -D RND:15,ME --data-length 48 --randomize-hosts --max-retries 1 --scan-delay 3s --max-scan-delay 10s -g 53 --spoof-mac 0 -p-",
       "service_detect_flags": "-sV -Pn -T0 --version-intensity 2 -g 53 --max-retries 1 --scan-delay 2s",
       "vuln_scripts": "",
-      "description": "T0, MTU 16, 15 приманок. Только для одиночных целей."
+      "ask_brute": false
     },
 
     "stealth_balanced": {
       "name": "Скрытность + разведка",
+      "scanner": "nmap",
       "discovery_flags": "-sn -T3 --max-retries 2",
       "port_scan_flags": "-sS -Pn -T2 -f -D RND:5,ME --data-length 16 --randomize-hosts --max-retries 2 --scan-delay 200ms -g 53 -p-",
       "service_detect_flags": "-sV -Pn -T2 --version-intensity 4 -g 53 --max-retries 2 --scan-delay 100ms",
       "vuln_scripts": "banner,ssl-cert",
-      "description": "Фрагментация + 5 приманок, -sV и легкие скрипты."
+      "ask_brute": false
     },
 
     "firewall_bypass": {
-      "name": "Обход файервола",
+      "name": "Обход файервола (Только Nmap)",
+      "scanner": "nmap",
       "discovery_flags": "-sn -PE -PS80,443,22 -PA80,443 -PP -T3 --max-retries 2",
       "port_scan_flags_multi": [
         {"label": "TCP SYN",  "flags": "-sS -Pn -f -f -T2 -g 53 --data-length 32 -p-"},
@@ -40,35 +44,56 @@
         {"label": "UDP",      "flags": "-sU -Pn -T3 --max-retries 2 --top-ports 300"}
       ],
       "service_detect_flags": "-sV -Pn -T2 --version-intensity 3",
-      "vuln_scripts": "vulners,http-enum,http-title,ssl-enum-ciphers",
-      "description": "4 TCP-метода + UDP, затем -sV только на открытые."
+      "vuln_scripts": "vulners,http-title,ssl-enum-ciphers",
+      "ask_brute": true,
+      "wordlist_users": "fasttrack.txt",
+      "wordlist_pass": "rockyou.txt"
     },
 
     "full": {
-      "name": "Полный скан (тестовая среда)",
+      "name": "Полный скан (Все порты, Все сканеры)",
+      "scanner": "rustscan",
       "discovery_flags": "-sn -PE -T4 --max-retries 2",
       "port_scan_flags": "-sS -Pn -T4 -p- --open",
       "service_detect_flags": "-sV -Pn -O -T4 --version-intensity 5 --osscan-guess --max-retries 2",
-      "vuln_scripts": "vuln,vulners,http-enum,ssl-enum-ciphers,smb-vuln*,ftp-anon,ssh-auth-methods,snmp-info,dns-recursion",
-      "description": "Все 65535 TCP + OS detection + -sV intensity 5 + все скрипты."
+      
+      "httpx_flags": "-silent -sc -td -title -ip -web-server",
+      "nuclei_flags": "-as -rl 30 -c 10 -silent",
+      "vuln_scripts": "vulners,http-title,ssl-enum-ciphers,ftp-anon,ssh-auth-methods,default-login",
+      
+      "ask_brute": true,
+      "wordlist_users": "rockyou.txt",
+      "wordlist_pass": "rockyou.txt"
     },
 
     "bugbounty": {
-      "name": "Bug Bounty",
+      "name": "Bug Bounty (Httpx + Nuclei)",
+      "scanner": "rustscan",
       "discovery_flags": "-sn -PE -PS80,443 -T3 --max-retries 2",
       "port_scan_flags": "-sS -Pn -T3 --open -p 21,22,23,25,53,80,110,111,135,139,143,443,445,993,995,1433,1723,3306,3389,5432,5900,6379,8000,8080,8443,8888,9200,9443,27017,28017",
       "service_detect_flags": "-sV -Pn -T3 --version-intensity 4",
-      "vuln_scripts": "vulners,http-enum,http-title,http-methods,http-vuln-cve*,ssl-enum-ciphers,ssl-cert",
-      "description": "30 критичных портов, -sV, vulners + http/ssl скрипты."
+      
+      "httpx_flags": "-silent -sc -td -title -ip -web-server",
+      "nuclei_flags": "-as -rl 50 -c 20 -silent",
+      "vuln_scripts": "vulners,http-title,http-methods,ssl-enum-ciphers,ssl-cert",
+      
+      "ask_brute": true,
+      "wordlist_users": "fasttrack.txt",
+      "wordlist_pass": "rockyou.txt"
     },
 
     "fast": {
-      "name": "Быстрый скан",
+      "name": "Быстрый скан (Топ 5 портов)",
+      "scanner": "rustscan",
       "discovery_flags": "-sn -T4 --max-retries 1",
       "port_scan_flags": "-sS -Pn -T4 --open -p 80,443,22,3306,5432",
-      "service_detect_flags": "",
-      "vuln_scripts": "",
-      "description": "Только живые хосты + топ-5 портов."
+      "service_detect_flags": "-sV -Pn -T4 --version-light",
+      
+      "httpx_flags": "-silent -sc -td -title",
+      "nuclei_flags": "",
+      "vuln_scripts": "http-title",
+      
+      "ask_brute": false
     }
   }
 }
