@@ -17,8 +17,8 @@ class ConfigManager:
         except Exception as e:
             sys.exit(f"\n[!] Неизвестная ошибка при чтении {config_path}:\n    {e}\n")
             
-        self.wordlist_users = self.config.get("wordlists/wordlist_users", "/usr/share/wordlists/fasttrack.txt")
-        self.wordlist_pass = self.config.get("wordlists/wordlist_pass", "/usr/share/wordlists/rockyou.txt")
+        self.wordlist_users = self.config.get("wordlist_users", "/usr/share/wordlists/fasttrack.txt")
+        self.wordlist_pass = self.config.get("wordlist_pass", "/usr/share/wordlists/rockyou.txt")
             
     def get_mode(self, mode_name):
         mode = self.config.get("modes", {}).get(mode_name)

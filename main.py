@@ -27,7 +27,7 @@ class NetworkAudit:
         self.scanner_type = self.mode.get("scanner", "nmap").lower()
 
     def execute(self):
-        print(f"\n{'=' * 70}\n  Аудит:  {self.mode['name']}\n  Цель:   {self.target}\n  Вывод:  {self.out_dir}/\n{'=' * 70}\n")
+        print(f"\n{'=' * 70}\n  Аудит:  {self.mode['name']}\n  Цель:   {self.target}\n  Вывод:  {self.out_dir}/\n  Выбран словарь пользователей: {self.config_mgr.wordlist_users}\n  Выбран словарь с паролями: {self.config_mgr.wordlist_pass}\n {'=' * 70}\n")
         scan_targets = [self.target]
 
         if self.is_external:

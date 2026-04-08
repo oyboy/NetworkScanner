@@ -2,6 +2,9 @@
   "target": "192.168.31.1",
   "output_dir": "scan_results",
 
+  "wordlist_users": "wordlists/fasttrack.txt",
+  "wordlist_pass": "wordlists/rockyou.txt",
+
   "modes": {
     "stealth": {
       "name": "Скрытный скан",
@@ -45,9 +48,7 @@
       ],
       "service_detect_flags": "-sV -Pn -T2 --version-intensity 3",
       "vuln_scripts": "vulners,http-title,ssl-enum-ciphers",
-      "ask_brute": true,
-      "wordlist_users": "fasttrack.txt",
-      "wordlist_pass": "rockyou.txt"
+      "ask_brute": true
     },
 
     "full": {
@@ -61,9 +62,7 @@
       "nuclei_flags": "-as -rl 30 -c 10 -silent",
       "vuln_scripts": "vulners,http-title,ssl-enum-ciphers,ftp-anon,ssh-auth-methods,default-login",
       
-      "ask_brute": true,
-      "wordlist_users": "rockyou.txt",
-      "wordlist_pass": "rockyou.txt"
+      "ask_brute": true
     },
 
     "bugbounty": {
@@ -77,9 +76,7 @@
       "nuclei_flags": "-as -rl 50 -c 20 -silent",
       "vuln_scripts": "vulners,http-title,http-methods,ssl-enum-ciphers,ssl-cert",
       
-      "ask_brute": true,
-      "wordlist_users": "fasttrack.txt",
-      "wordlist_pass": "rockyou.txt"
+      "ask_brute": true
     },
 
     "fast": {
