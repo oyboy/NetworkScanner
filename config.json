@@ -9,9 +9,9 @@
     "stealth": {
       "name": "Скрытный скан",
       "scanner": "nmap",
-      "discovery_flags": "-sn -T3 --max-retries 2",
-      "port_scan_flags": "-sS -Pn -T1 -f -f -D RND:8,ME --data-length 24 --randomize-hosts --max-retries 1 --scan-delay 500ms -g 53 --spoof-mac 0 -p-",
-      "service_detect_flags": "-sV -Pn -T1 --version-intensity 3 -g 53 --max-retries 1 --scan-delay 300ms",
+      "discovery_flags": "-Pn",
+      "port_scan_flags": "-sN -F -T2 -f -D RND:10 -g 53 --data-length 16 --randomize-hosts --max-retries 0 --spoof-mac 0",
+      "service_detect_flags": "-sV -Pn -T2 --version-intensity 2 -g 53 --max-retries 0 --scan-delay 200ms",
       "vuln_scripts": "",
       "ask_brute": false
     },
@@ -20,19 +20,9 @@
       "name": "Параноидальная скрытность",
       "scanner": "nmap",
       "discovery_flags": "-sn -PE -T1 --max-retries 1",
-      "port_scan_flags": "-sS -Pn -T0 -f --mtu 16 -D RND:15,ME --data-length 48 --randomize-hosts --max-retries 1 --scan-delay 3s --max-scan-delay 10s -g 53 --spoof-mac 0 -p-",
-      "service_detect_flags": "-sV -Pn -T0 --version-intensity 2 -g 53 --max-retries 1 --scan-delay 2s",
+      "port_scan_flags": "-sN -p- -T1 -ff -D RND:15 -g 53 --data-length 24 --randomize-hosts --max-retries 0 --scan-delay 400ms --spoof-mac 0",      "service_detect_flags": "-sV -Pn -T0 --version-intensity 2 -g 53 --max-retries 1 --scan-delay 2s",
+      "service_detect_flags": "-sV -Pn -T1 --version-intensity 2 -g 53 --max-retries 0 --scan-delay 200ms",
       "vuln_scripts": "",
-      "ask_brute": false
-    },
-
-    "stealth_balanced": {
-      "name": "Скрытность + разведка",
-      "scanner": "nmap",
-      "discovery_flags": "-sn -T3 --max-retries 2",
-      "port_scan_flags": "-sS -Pn -T2 -f -D RND:5,ME --data-length 16 --randomize-hosts --max-retries 2 --scan-delay 200ms -g 53 -p-",
-      "service_detect_flags": "-sV -Pn -T2 --version-intensity 4 -g 53 --max-retries 2 --scan-delay 100ms",
-      "vuln_scripts": "banner,ssl-cert",
       "ask_brute": false
     },
 
